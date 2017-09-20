@@ -7,21 +7,19 @@ namespace HelperMethods
         public static void Main(string[] args)
         {
 
-			string myValue = superSecretFormula();
-			Console.WriteLine(myValue);
-			Console.ReadLine();
-			        }
-		//when naming convention allows anyone who reads the code know that its a private variable, use this for helper methods
-
-		private static string superSecretFormula()
- 
-         {
-             
-             return "HI MR. Cox!";
-			// reuturn is the command to deliver it to the code that actually called it
-			// Information about this assembly is defined by the following attributes. 
-			// Change them to the values specific to your project.
+			{           
+				string myValue = superSecretFormula("sunshine");
+				Console.WriteLine(myValue);
+				Console.ReadLine();
+				
+				        }
+			        // very similiar to a function from last year you can call it anywhere and run it a bunch so i do not have to write code twice
+			        // void means it will not return anything like in public static void
 			
+			      private static string superSecretFormula(string name)
+         {
+	
+                return String.Format("Hello, {0}!", name);
 			[assembly: AssemblyTitle("BranchingPart1")]
 			[assembly: AssemblyDescription("")]
 			[assembly: AssemblyConfiguration("")]
@@ -39,7 +37,6 @@ namespace HelperMethods
 			
 			// The following attributes are used to specify the signing key for the assembly, 
 			// if desired. See the Mono documentation for more information about signing.
-			
 			//[assembly: AssemblyDelaySign(false)]
 			//[assembly: AssemblyKeyFile("")]
 
